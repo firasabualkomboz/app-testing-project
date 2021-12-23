@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "539362101910",
+    "project_id": "jerusalem-app-b47d0",
+    "storage_bucket": "jerusalem-app-b47d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539362101910:android:e5bab6a4d51d355215d0b7",
+        "android_client_info": {
+          "package_name": "com.ix.ibrahim7.ps.text.jerusalemapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539362101910-dt9dsoo5sveg6ub22cucn2mqigp2k3sk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ix.ibrahim7.ps.text.jerusalemapp",
+            "certificate_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+          }
+        },
+        {
+          "client_id": "539362101910-f0vhpf72hro0nukkdb31bvr79tnh1d3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZXCjM80Jfl4HL1g7XD6H3IwmlQuhJgsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539362101910-f0vhpf72hro0nukkdb31bvr79tnh1d3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

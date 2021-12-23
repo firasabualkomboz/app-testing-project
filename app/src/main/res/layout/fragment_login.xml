@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <include
+            android:id="@+id/toolbarView"
+            layout="@layout/toolbar_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_16">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:src="@drawable/ic_login_img"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="64dp"
+                    android:layout_marginVertical="12sp"
+                    android:fontFamily="@font/tajawal_medium"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.6"
+                    android:text="قم بتسجيل الدخول حتى تتمتع بكافة
+إمكانيات \nو مميزات التطبيق"
+                    android:textColor="@color/header"
+                    android:textSize="@dimen/font_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:background="@drawable/shape_background_dialog"
+                    android:elevation="@dimen/margin_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/tajawal_bold"
+                        android:text="الإيميل الشخصي"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginVertical="@dimen/margin_8"
+                        android:hint="أدخل الإيميل الخاص بك"
+                        android:textColorHint="@color/subtext"
+                        app:boxCornerRadiusBottomEnd="@dimen/radius_4"
+                        app:boxCornerRadiusBottomStart="@dimen/radius_4"
+                        app:boxCornerRadiusTopEnd="@dimen/radius_4"
+                        app:boxCornerRadiusTopStart="@dimen/radius_4"
+                        app:boxStrokeColor="@color/input_box_tint"
+                        app:hintTextColor="@color/subtext"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/header"
+                            android:textColorHint="@color/header"
+                            android:textCursorDrawable="@drawable/shape_cursor"
+                            app:backgroundTint="@color/border" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:fontFamily="@font/tajawal_bold"
+                        android:text="كلمة المرور"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout3"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginVertical="@dimen/margin_8"
+                        android:hint="كلمة المرور"
+                        android:textColorHint="@color/subtext"
+                        app:boxCornerRadiusBottomEnd="@dimen/radius_4"
+                        app:boxCornerRadiusBottomStart="@dimen/radius_4"
+                        app:boxCornerRadiusTopEnd="@dimen/radius_4"
+                        app:boxCornerRadiusTopStart="@dimen/radius_4"
+                        app:boxStrokeColor="@color/input_box_tint"
+                        app:hintTextColor="@color/subtext"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:textColor="@color/header"
+                            android:textColorHint="@color/header"
+                            android:textCursorDrawable="@drawable/shape_cursor"
+                            app:backgroundTint="@color/border" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/btnForgetPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:fontFamily="@font/tajawal_medium"
+                        android:text="نسيت كلمة المرور ؟"
+                        android:textColor="@color/header"
+                        android:textSize="@dimen/font_14"
+                        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSignIn"
+                        style="@style/primary_button_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginVertical="@dimen/margin_16"
+                        android:elevation="32dp"
+                        android:text="تسجيل الدخول"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toBottomOf="@+id/btnForgetPassword"
+                        tools:layout_editor_absoluteX="16dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLoginAsGeust"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:backgroundTint="@color/gray_lite"
+                        android:elevation="@dimen/elevation_4"
+                        android:fontFamily="@font/tajawal_bold"
+                        android:padding="@dimen/font_14"
+                        android:text="تسجيل الدخول كضيف"
+                        android:textColor="@color/header"
+                        android:textSize="@dimen/font_18"
+                        android:visibility="visible"
+                        app:cornerRadius="@dimen/radius_4"
+                        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnLoginAsGeust">
+
+                        <TextView
+                            android:id="@+id/btnCreateNew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin_4"
+                            android:layout_marginTop="@dimen/margin_12"
+                            android:fontFamily="@font/tajawal_medium"
+                            android:text="إنشاء جديد"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/font_14"
+                            app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+                        <TextView
+                            android:id="@+id/txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_12"
+                            android:fontFamily="@font/tajawal_medium"
+                            android:text="ليس لديك حساب ؟"
+                            android:textColor="@color/header"
+                            android:textSize="@dimen/font_14"
+                            app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

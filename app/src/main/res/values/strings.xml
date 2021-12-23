@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Jerusalem App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome1_title">أخر الأخبار التي تتعلق بالقضايا الفلسطينية و التي تتعلق بالمسجد الأقصى و القدس الشريف</string>
+    <string name="welcome2_title">بإمكانك مشاهدة أجمل المعالم الفلسطينية  و  الأثار و القصص الرائعة</string>
+    <string name="welcome3_title">شارك مع الجميع صورة , فيديو لأجمل المواقع  و الأماكن التي قمت بزيارتها في فلسطين</string>
+    <string name="apiKey" translatable="false">AIzaSyC8R1QmcxOQTFMVhS2xjuJjUTDNZhZtIyE</string>
+    <string name="imges">صور</string>
+    <string name="videos">فيديو</string>
+    <string name="occasions">مناسبات</string>
+    <string name="update">تحديث</string>
+    <string name="my_account">حسابي</string>
+    <string name="save">save</string>
+    <string name="require_field">هذا الحقل مطلوب</string>
+    <string name="reset_password">إستعادة كلمة المرور</string>
+    <string name="add_post">إضافة بوست</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="do_you_want_to_know_more">حابب تعرف اكتر عن</string>
+    <string name="home_page">الصفحة الرئيسية</string>
+    <string name="required_field">الحقل مطلوب</string>
+    <string name="you_must_add_post_contect">يجب اضافة محتوى للبوست, بإمكانك إضافة صورة, فيديو او موقعك الحالي</string>
+    <string name="last_news">آخر الأخبار</string>
+    <string name="know_more">إعرف أكثر</string>
+    <string name="video_add_successfully">تم إضافة الفيديو بنجاح</string>
+</resources>

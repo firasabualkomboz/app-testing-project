@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="4dp"
+    android:id="@+id/bottom_sheet"
+    app:behavior_hideable="true"
+    android:paddingTop="44dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:background="#4DFFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_set_background"
+            style="@style/primary_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_24"
+            android:elevation="32dp"
+            android:text="تعيين كخلفية"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/btnForgetPassword" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:backgroundTint="@color/blue"
+            android:elevation="@dimen/elevation_4"
+            android:fontFamily="@font/tajawal_bold"
+            android:padding="@dimen/font_14"
+            android:text="تحميل الصورة"
+            android:textColor="@color/header"
+            android:textSize="@dimen/font_18"
+            android:visibility="visible"
+            app:cornerRadius="@dimen/radius_4"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    </LinearLayout>
+
+</RelativeLayout>
