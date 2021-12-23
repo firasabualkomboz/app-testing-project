@@ -59,7 +59,6 @@ class ImageAdapter(val onClick: OnClickMenuSheet, val activity: Activity) :
 
     override fun getItemCount() = differ.currentList.size
 
-
     override fun onBindViewHolder(holder: ImageHolder, position: Int) {
 
         val photo = getImageItemAt(position)
