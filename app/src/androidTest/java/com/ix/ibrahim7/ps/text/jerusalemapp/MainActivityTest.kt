@@ -2,7 +2,6 @@ package com.ix.ibrahim7.ps.text.jerusalemapp
 
 import android.content.Intent
 import android.os.SystemClock
-import androidx.recyclerview.widget.RecyclerView
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
@@ -32,9 +31,6 @@ class MainActivityTest {
         i.putExtra("email", "Fir@gmail.com")
         i.putExtra("pass", "123456789")
         i.putExtra("pass2", "123456789")
-
-
-
 
         activitySearchScenario = ActivityScenario.launch(i)
         SystemClock.sleep(3000)
@@ -78,19 +74,18 @@ class MainActivityTest {
 
         onView(withId(R.id.btnSignUp))
             .perform(click())
-
-
     }
 
     @Test
-    fun getTest(){
+    fun getTest() {
         val i = Intent(ApplicationProvider.getApplicationContext(), MainActivity::class.java)
-        i.putExtra("name", "You can use the Firebase KTX libraries to write idiomatic Kotlin. Change the firebase-crashlytics library dependency line in build.gradle to firebase-crashlytics-ktx.")
-
+        i.putExtra(
+            "name",
+            "You can use the Firebase KTX libraries to write idiomatic Kotlin. Change the firebase-crashlytics library dependency line in build.gradle to firebase-crashlytics-ktx."
+        )
 
         activitySearchScenario = ActivityScenario.launch(i)
         SystemClock.sleep(3000)
-
 
 //        onView(withId(R.id.rcPostList))
 //            .perform(
@@ -103,7 +98,6 @@ class MainActivityTest {
         onView(withId(R.id.btnAdd))
             .perform(click())
 
-
         SystemClock.sleep(3000)
 
         onView(withId(R.id.txtPostDescription))
@@ -112,6 +106,5 @@ class MainActivityTest {
                 ViewActions.typeText(i.getStringExtra("name")),
                 ViewActions.closeSoftKeyboard()
             )
-
     }
 }

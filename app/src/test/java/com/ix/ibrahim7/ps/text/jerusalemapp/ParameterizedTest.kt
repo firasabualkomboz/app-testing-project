@@ -17,7 +17,7 @@ class ParameterizedTest(
     @SmallTest
     @Test
     fun sum() {
-        val num = arrayOf(a, b, c) // implicit type declaration
+        val num = arrayOf(a, b, c) // array
 
         var sum = 0
         for (i in 0..3) {

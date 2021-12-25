@@ -36,7 +36,7 @@ class ExampleUnitTest {
 
     @Test
     fun sum() {
-        val num = arrayOf(1, 2, 3, 4) // implicit type declaration
+        val num = arrayOf(1, 2, 3, 4)
 
         var sum = 0
         for (i in 0..3) {
@@ -77,7 +77,6 @@ class ExampleUnitTest {
 
     @Test
     fun countAndSay() {
-
         var last = "1"
         (1 until 2).forEach {
             var nextStr = ""
