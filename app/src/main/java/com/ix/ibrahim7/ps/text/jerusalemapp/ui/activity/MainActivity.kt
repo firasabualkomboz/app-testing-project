@@ -2,12 +2,12 @@ package com.ix.ibrahim7.ps.text.jerusalemapp.ui.activity
 
 import android.content.Context
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
-        setLanguage("en",this)
+        setLanguage("en", this)
         setContentView(mBinding.root)
         window.apply {
             decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
@@ -44,25 +44,22 @@ class MainActivity : AppCompatActivity() {
             navController
         )
 
-
-
-
-       /*mBinding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.profileFragment2 -> {
-                    navController.navigate(R.id.profileFragment2, null, getNavOptions())
-                }
-                else -> {
-                    navController.navigate(item.itemId, null, null)
-                }
-            }
-            true
-        }*/
+        /*mBinding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
+             when (item.itemId) {
+                 R.id.profileFragment2 -> {
+                     navController.navigate(R.id.profileFragment2, null, getNavOptions())
+                 }
+                 else -> {
+                     navController.navigate(item.itemId, null, null)
+                 }
+             }
+             true
+         }*/
 
         navHostFragment!!.findNavController()
             .addOnDestinationChangedListener { _: NavController?, destination: NavDestination, arguments: Bundle? ->
                 when (destination.id) {
-                    R.id.splashFragment-> {
+                    R.id.splashFragment -> {
                         window.apply {
                             addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
                         }
@@ -73,15 +70,15 @@ class MainActivity : AppCompatActivity() {
                             clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
                         }
                     }
-                    R.id.homeFragment2,R.id.moreFragment,R.id.profileFragment2,R.id.newsFragment->{
+                    R.id.homeFragment2, R.id.moreFragment, R.id.profileFragment2, R.id.newsFragment -> {
                         mBinding.bottomNavigation.visibility = View.VISIBLE
                     }
-                    else->{
+                    else -> {
                         mBinding.bottomNavigation.visibility = View.GONE
                     }
                 }
             }
-Log.e("eee sha1",String().sha1)
+        Log.e("eee sha1", String().sha1)
     }
 
     val String.sha1: String
@@ -110,5 +107,4 @@ Log.e("eee sha1",String().sha1)
             res.updateConfiguration(cr, dr)
         }
     }
-
 }

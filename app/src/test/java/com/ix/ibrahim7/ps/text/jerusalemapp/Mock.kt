@@ -22,7 +22,7 @@ class Mock {
 
     @Test
     fun getData() {
-       // val text = data.getText("Hello")
+        // val text = data.getText("Hello")
         Mockito.`when`(data.getText("12345")).thenReturn("123456")
         Assert.assertEquals("1234", data.getText("12345"))
     }
@@ -32,5 +32,3 @@ class Mock {
         println("afterTest")
     }
 }
-
-

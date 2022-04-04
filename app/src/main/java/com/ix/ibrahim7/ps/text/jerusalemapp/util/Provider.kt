@@ -8,7 +8,6 @@ import android.os.Build
 import android.os.Environment
 import android.provider.DocumentsContract
 import android.provider.MediaStore
-import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -50,6 +49,7 @@ object Provider {
                 } else if ("audio" == type) {
                     contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
                 }
+
                 val selection = "_id=?"
                 val selectionArgs = arrayOf(
                     split[1]
@@ -64,9 +64,10 @@ object Provider {
         return null
     }
 
-
     fun getDataColumn(
-        context: Context, uri: Uri?, selection: String?,
+        context: Context,
+        uri: Uri?,
+        selection: String?,
         selectionArgs: Array<String>?
     ): String? {
         var cursor: Cursor? = null
@@ -88,7 +89,6 @@ object Provider {
         }
         return null
     }
-
 
     /**
      * @param uri The Uri to check.
@@ -124,6 +124,4 @@ object Provider {
             MultipartBody.Part.createFormData(key!!, "")
         }
     }
-
-
 }
